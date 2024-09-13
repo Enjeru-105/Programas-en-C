@@ -1,0 +1,85 @@
+/******************************************************************************
+
+4 programas diferentes
+
+*******************************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+#define p printf
+
+int main()
+{ 
+    //Programa 1: Promedio
+    char nom[60];
+    float cal1, cal2, cal3, cal4, cal5;
+    int cod;
+    p("****CALCULADORA DE PROMEDIOS****\nPrograma para calcular el promedio de 5 materias\n\n");
+    p("Ingresa tu Nombre (Max. 60 caracteres): "); 
+    fgets(nom, 60, stdin);
+    p("Ingresa tu código: ");
+    scanf("%i", &cod);
+    p("Ingresa la primer calificación: ");
+    scanf("%f", &cal1);
+    p("Ingresa la segunda calificación: ");
+    scanf("%f", &cal2);
+    p("Ingresa la tercera calificación: ");
+    scanf("%f", &cal3);
+    p("Ingresa la cuarta calificación: ");
+    scanf("%f", &cal4);
+    p("Ingresa la quinta calificación: ");
+    scanf("%f", &cal5);
+    p("\n\nNombre: %sCódigo: %i\nTu promedio es: %.2f", nom, cod, (cal1+cal2+cal3+cal4+cal5)/5);
+    p("\n\nPresione Enter para continuar");
+    getchar();
+    getchar();
+    system("clear");//Limpiar Pantalla  
+    
+    //Programa 2: Boletos de camión
+    char orig[30], dest[30];
+    float km, costkm, costfnl;
+    p("Camiones La Curva Loca S.A de C.V.\n****CALCULADORA DE PRECIOS DE BOLETOS****\nPrograma para calcular el precio de un boleto de camión\n\n");
+    p("Ingrese el lugar de origen: ");
+    fgets(orig, 30, stdin);
+    p("Ingrese el lugar de deestino: ");
+    fgets(dest, 30, stdin);
+    p("Ingrese la cantidad de kilómetros a recorrer: ");
+    scanf("%f", &km);
+    p("Ingrese el costo por kilómetro: ");
+    scanf("%f", &costkm);
+    costfnl=(km*costkm)*1.16;
+    p("\n\nOrigen: %sDestino: %sPrecio del boleto con IVA incluido es de: $%.2f", orig, dest, costfnl);
+    p("\n\nPresione Enter para continuar");
+    getchar();
+    getchar();
+    system("clear");
+    
+    //Programa 3: Centimetros a metros
+    float cm, mts;
+    p("****CONVERSOR DE CENTIMETROS A METROS****\nPrograma para convertir una medida de centimetros a metros\n\n");
+    p("Ingrese la cantidad de centimetros a convertir: ");
+    scanf("%f", &cm);
+    mts=cm/100;
+    p("\n\n%.2f Centimetros equivalen a: %.4fmts", cm, mts);
+    p("\n\nPresione Enter para continuar");
+    getchar();
+    getchar();
+    system("clear");
+    
+    //Programa 4: Centigrados a Farenheit
+    float gC, gF;
+    p("****CONVERSOR DE GRADOS CELSIUS A FARENHEIT****\nPrograma para convertir una medida de grados celsius a farenheit\n\n");
+    p("Ingrese la cantidad de celsius a convertir: ");
+    scanf("%f", &gC);
+    gF=(gC*(9/5))+32;
+    p("\n\n%.2f Grados centigrados equivalen a: %.2fºF", gC, gF);
+    p("\n\nPresione Enter para continuar");
+    getchar();
+    getchar();
+    system("clear");
+
+    //Fin del programa
+    p("Fin del programa, gracias por preferir Enjeru Programing Services");
+    p("\n\nPresione Enter para finalizar");
+    getchar();
+    return 0;
+}
